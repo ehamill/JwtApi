@@ -17,16 +17,14 @@ namespace JwtApi.Controllers
     [ApiController]
     public class AuthController(IAuthService authService) : ControllerBase
     {
-        /// <summary>
-        /// [Authorize]
-        /// </summary>
-        /// <returns></returns>
+        
+        [Authorize]
         [HttpGet("authtest")]
         public async Task<string> authTest()
         {
             string UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            return "you are authorized";
+            return "you are authorized UserId: " + UserId;
 
         }
 

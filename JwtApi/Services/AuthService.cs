@@ -16,7 +16,6 @@ namespace JwtApi.Services
     {
         public async Task<User?> RegisterAsync(UserDto request)
         {
-
             try {
                 if (await context.Users.AnyAsync(c => c.UserName == request.UserName))
                 {
@@ -35,6 +34,7 @@ namespace JwtApi.Services
             user.UserName = request.UserName;
             user.Email = request.Email;
             user.PasswordHash = hashedPassword;
+            user.UserId = Guid.NewGuid().ToString();
 
             context.Users.Add(user);
             await context.SaveChangesAsync();

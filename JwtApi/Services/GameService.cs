@@ -17,9 +17,18 @@ namespace JwtApi.Services
 
         public async Task<City> GetCity(string UserID) {
 
-            var city = await db.Cities.FirstOrDefaultAsync(c => c.UserId == UserID);
-            
+            var city = await db.Cities.Include(c => c.Buildings).FirstOrDefaultAsync(c => c.UserId == UserID);
+            //UserCity = await db.Cities
+            //    .Include(c => c.Buildings)
+            //    .Include(c => c.Heros).Include(c => c.TroopQueues)
+            //    .Where(c => c.UserId == UserId).FirstOrDefaultAsync()
+
             return city;
+
+
+
+
+
         }
 
 

@@ -66,23 +66,23 @@ namespace JwtApi.Entities
         public Terrain Terrain { get; set; } = Terrain.None;
         // [NotMapped]
         public List<Building> Buildings { get; set; }
+        ////[NotMapped]
+        //public List<TroopQueue> TroopQueues { get; set; }
         //[NotMapped]
-        public List<TroopQueue> TroopQueues { get; set; }
-        [NotMapped]
-        public List<TroopProperties> TroopProperties { get; set; }
-        [NotMapped]
-        public List<FutureCityData> FutureCityData { get; set; }
+        //public List<TroopProperties> TroopProperties { get; set; }
+        ////[NotMapped]
+        ////public List<FutureCityData> FutureCityData { get; set; }
+        ////[NotMapped]
+        ////public List<Troops> Troops { get; set; }
+        ////[NotMapped]
+        ////public List<Defenses> Defenses { get; set; }
         //[NotMapped]
-        //public List<Troops> Troops { get; set; }
+        //public List<BuildingCost> ListOfBuildingsCost { get; set; }
         //[NotMapped]
-        //public List<Defenses> Defenses { get; set; }
-        [NotMapped]
-        public List<BuildingCost> ListOfBuildingsCost { get; set; }
-        [NotMapped]
-        public List<Research> ResearchCost { get; set; }
+        //public List<Research> ResearchCost { get; set; }
+        ////[NotMapped]
+        //public List<Hero> Heros { get; set; }
         //[NotMapped]
-        public List<Hero> Heros { get; set; }
-        [NotMapped]
-        public List<Battle> Battles { get; set; }
+        //public List<Battle> Battles { get; set; }
     }
 }

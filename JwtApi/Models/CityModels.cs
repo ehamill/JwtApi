@@ -1,14 +1,17 @@
-﻿namespace JwtApi.Models
+﻿using JwtApi.Data;
+
+namespace JwtApi.Models
 {
     
     public class UpdateCityModel
     {
         public int CityId { get; set; }
         public int BuildingId { get; set; }
-        public string? BuildingTypeString { get; set; }
-        public int BuildingTypeInt { get; set; }
+       // public string? BuildingTypeString { get; set; }
+        public int BuildingTypeInt { get; set; } // have to use int?
+        /// </summary>
         public int Level { get; set; }
-        public int Location { get; set; } = -1;
+        //public int Location { get; set; } = -1;
     }
     public class StartBattleModel {
         public int BattleId { get; set; }
@@ -57,9 +60,11 @@
     }
     public class SpeedUpModel
     {
-        public int CityId { get; set; }
-        public bool SpeedUp5min { get; set; }
-        public int UsedOn { get; set; }
+        public int BuildingId { get; set; }
+        //public SpeedUpTypes SpeedUpType { get; set; }
+        public int SpeedUpTypeId { get; set; } //15min, 1 hour, etc
+        //public SpeedUp UsedOn { get; set; }
+        public int UsedOn { get; set; } ///builder1, builder2, research, trooptraining, etc
     }
     public class SendEmailModel
     {

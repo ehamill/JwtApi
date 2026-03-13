@@ -29,6 +29,7 @@ namespace JwtApi.Entities
         public int Construction1BuildingLevel { get; set; } = 0;
         public bool Builder1Busy { get; set; } = false;
         public int Builder1Time { get; set; } = 0;
+        public int Builder1TimeLeft { get; set; } = 0;
         public string? BuildingWhat { get; set; }
 
         public int Food { get; set; } = 5000;
@@ -66,23 +67,25 @@ namespace JwtApi.Entities
         public Terrain Terrain { get; set; } = Terrain.None;
         // [NotMapped]
         public List<Building> Buildings { get; set; }
-        ////[NotMapped]
-        //public List<TroopQueue> TroopQueues { get; set; }
         //[NotMapped]
-        //public List<TroopProperties> TroopProperties { get; set; }
+        public List<TroopQueue> TroopQueues { get; set; }
+        [NotMapped]
+        public List<TroopProperties> TroopProperties { get; set; }
         ////[NotMapped]
         ////public List<FutureCityData> FutureCityData { get; set; }
         ////[NotMapped]
         ////public List<Troops> Troops { get; set; }
         ////[NotMapped]
         ////public List<Defenses> Defenses { get; set; }
+        [NotMapped]
+        public List<BuildingCost> ListOfBuildingsCost { get; set; }
+        [NotMapped]
+        public List<Troop> Troops { get; set; }
+        [NotMapped]
+        public List<Research> ResearchCost { get; set; }
         //[NotMapped]
-        //public List<BuildingCost> ListOfBuildingsCost { get; set; }
-        //[NotMapped]
-        //public List<Research> ResearchCost { get; set; }
-        ////[NotMapped]
-        //public List<Hero> Heros { get; set; }
-        //[NotMapped]
-        //public List<Battle> Battles { get; set; }
+        public List<Hero> Heros { get; set; }
+        [NotMapped]
+        public List<Battle> Battles { get; set; }
     }
 }

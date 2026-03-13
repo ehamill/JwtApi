@@ -14,8 +14,8 @@ namespace JwtApi.Models
         public int Iron { get; set; } = 0;
         public int Time { get; set; } = 0;
         public string Description { get; set; } = "";
-        public BuildingType? BuildingTypeInt { get; set; }
-        public TroopType? TroopType { get; set; }
+        public int? BuildingTypeInt { get; set; }
+        public int? TroopType { get; set; }
         public bool Farm { get; set; } = false;
 
     }

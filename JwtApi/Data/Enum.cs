@@ -2,9 +2,11 @@
 {
     public enum MarchType
     {
+        Null = 0,
         Attack = 1,
         Scout = 2,
         Reinforce = 3,
+        Home = 4,
     }
     public enum Terrain
     {
@@ -41,8 +43,8 @@
         Farm = 16,
         Iron_Mine = 17,
         Sawmill = 18,
-        Quarry = 20,
-        Walls = 21,
+        Quarry = 19,
+        Walls = 20,
         Not_Found = 50,
     }
 
@@ -86,15 +88,15 @@
         None = 0,
         Worker = 1,
         Warrior = 2,
-        Pikeman = 3,
-        Swordsman = 4,
-        Archer = 5,
-        Battering_Ram = 6,
-        Scout = 7,
-        Cavalry = 8,
+        Scout = 3,
+        Pikeman = 4,
+        Swordsman = 5,
+        Archer = 6,
+        Cavalry = 7,
+        Transporter = 8,
         Cataphract = 9,
-        Transporter = 10,
-        Ballista = 11,
+        Ballista = 10,
+        Battering_Ram = 11,
         Catapult = 12,
         Trap = 13,
         Abatis = 14,
@@ -102,11 +104,49 @@
         Rolling_Log = 16,
         Defensive_Trebuchet = 17
     }
-    public enum SpeedUp { 
+    public enum BuilderType { 
         Builder1 = 1,
         Builder2 = 2,
         Research = 3,
+        TroopTraining = 4,
+        WallsTraining = 5,
+        MarketDelivery = 6,
     }
+
+    public enum SpeedUpTypes
+    {
+        Free = -1,
+        Beginner_Guidelines = 1,//Shorten Construction or Research time by 15 minutes.
+        Primary_Guidlines = 2, //Shorten construction or research time by 1 hour.
+        Intermediate_Guidelines = 3, //Shorten construction time by 2 and a half hours
+        Senior_Guidelines = 4, //Shorten construction or research time by 8 hours
+        Master_Guidelines = 5, //Shorten construction or research time by 10 to 30 hours.
+        Ultimate_Guidelines = 6, //Shorten construction or research time by 30%
+        Archimedes_Note = 7,//Shorten the time of construction of Fortified units by %30
+        Napoleons_Diary = 8, //Shorten remaining time of training troops %30. Can only be applied one to a training group.
+        Merchant_Fleet = 9, //Instantly finish transportation from the market
+        // Instant Handover = 10, //You can use this item to give up your colony and withdraw your troops and staffs instantly.
+        
+    }
+    public enum ConstuctionSpeedUps
+    {
+        Free = -1,
+        Beginner_Guidelines = 1,//Shorten Construction or Research time by 15 minutes
+        Primary_Guidlines = 2, //Shorten construction or research time by 1 hour.
+        Intermediate_Guidelines = 3, //Shorten construction time by 2 and a half hours
+        Senior_Guidelines = 4, //Shorten construction or research time by 8 hours
+        Master_Guidelines = 5, //Shorten construction or research time by 10 to 30 hours
+        Ultimate_Guidelines = 6, //Shorten construction or research time by 30%
+    }
+    public enum ResearchSpeedUps
+    {
+        Beginner_Guidelines = 1,//Shorten Construction or Research time by 15 minutes
+        Primary_Guidlines = 2, //Shorten construction or research time by 1 hour.
+        Senior_Guidelines = 4, //Shorten construction or research time by 8 hours
+        Master_Guidelines = 5, //Shorten construction or research time by 10 to 30 hours
+        Ultimate_Guidelines = 6, //Shorten construction or research time by 30%
+    }
+
     public enum ResearchType
     {
         None = 0,

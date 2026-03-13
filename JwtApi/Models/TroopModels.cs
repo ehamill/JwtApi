@@ -34,6 +34,7 @@ namespace JwtApi.Models
         public class Troop {
             public int TroopId { get; set; }    
             public int CityId { get; set; }
+            public int MarchType { get; set; }
             public int HeroId { get; set; } = 0;
             public DateTime DateTime { get; set; } = DateTime.UtcNow;
             public int Workers { get; set; } = 0;
